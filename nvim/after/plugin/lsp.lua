@@ -28,6 +28,13 @@ lsp.set_preferences({
 })
 
 lsp.setup_nvim_cmp({
+    sources = {
+        "buffer",
+        "path",
+        "luasnip",
+        "nvim_lsp",
+        "copilot",
+    },
     mapping = cmp_mappings
 })
 
