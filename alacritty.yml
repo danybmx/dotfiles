@@ -11,15 +11,15 @@ env:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
-    style: Light
+    family: VictorMono Nerd Font
+    style: Regular
   bold:
-    family: JetBrainsMono Nerd Font
+    family: VictorMono Nerd Font
     style: Bold
   italic:
-    family: JetBrainsMono Nerd Font
+    family: VictorMono Nerd Font
     style: Italic
-  size: 13.0
+  size: 14.0
   offset:
     x: 0
     y: 0

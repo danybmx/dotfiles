@@ -29,6 +29,12 @@ return require('packer').startup(function(use)
 
     use('tpope/vim-fugitive')
 
+    use('tpope/vim-surround')
+
+    use('tpope/vim-commentary')
+
+    use('jose-elias-alvarez/null-ls.nvim')
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
