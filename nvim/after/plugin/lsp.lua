@@ -10,6 +10,10 @@ lsp.ensure_installed({
     "lua_ls",
     "rust_analyzer",
     "volar",
+    "lemminx",
+    "jsonls",
+    "yamlls",
+    "tailwindcss",
 })
 
 local cmp = require("cmp")
@@ -29,11 +33,10 @@ lsp.set_preferences({
 
 lsp.setup_nvim_cmp({
     sources = {
-        "buffer",
-        "path",
-        "luasnip",
-        "nvim_lsp",
-        "copilot",
+        { name = "buffer" },
+        { name = "path" },
+        { name = "luasnip" },
+        { name = "nvim_lsp" },
     },
     mapping = cmp_mappings
 })
@@ -43,7 +46,6 @@ lsp.on_attach(function(client, bufnr)
 
     vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', { buffer = bufnr })
     vim.keymap.set('n', '<leader>ps', telescope_builtin.lsp_document_symbols, {})
-
     vim.keymap.set('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<cr>')
 end)
 
@@ -53,7 +55,7 @@ lsp.format_on_save({
         timeout_ms = 10000,
     },
     servers = {
-        ['null-ls'] = {'javascript', 'html', 'typescript', 'vue'}
+        ['null-ls'] = { 'javascript', 'html', 'typescript', 'vue', 'php', 'css' }
     }
 })
 
@@ -62,8 +64,12 @@ lsp.setup()
 local null_ls = require('null-ls')
 
 null_ls.setup({
-  sources = {
-    null_ls.builtins.formatting.prettier,
-    null_ls.builtins.diagnostics.eslint,
-  }
+    sources = {
+        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.blade_formatter,
+        null_ls.builtins.formatting.phpcbf,
+        null_ls.builtins.diagnostics.prettier,
+        null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.diagnostics.php,
+    }
 })
