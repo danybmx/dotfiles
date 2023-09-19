@@ -14,6 +14,7 @@ lsp.ensure_installed({
     "jsonls",
     "yamlls",
     "tailwindcss",
+    "emmet_ls"
 })
 
 local cmp = require("cmp")
@@ -22,6 +23,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
     ['<C-Space>'] = cmp.mapping.complete(),
 })
 
@@ -47,6 +50,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', { buffer = bufnr })
     vim.keymap.set('n', '<leader>ps', telescope_builtin.lsp_document_symbols, {})
     vim.keymap.set('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<cr>')
+    vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<cr>')
 end)
 
 lsp.format_on_save({
@@ -55,7 +59,7 @@ lsp.format_on_save({
         timeout_ms = 10000,
     },
     servers = {
-        ['null-ls'] = { 'javascript', 'html', 'typescript', 'vue', 'php', 'css' }
+        ['null-ls'] = { 'javascript', 'html', 'typescript', 'vue', 'css', 'php' },
     }
 })
 
@@ -65,11 +69,15 @@ local null_ls = require('null-ls')
 
 null_ls.setup({
     sources = {
-        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.prettierd,
         null_ls.builtins.formatting.blade_formatter,
-        null_ls.builtins.formatting.phpcbf,
-        null_ls.builtins.diagnostics.prettier,
-        null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.formatting.phpcsfixer.with({
+            args = { '--allow-risky=yes', 'fix', '$FILENAME' },
+        }),
         null_ls.builtins.diagnostics.php,
+        null_ls.builtins.diagnostics.phpcs.with({
+            extra_args = { '--standard', 'WordPress' },
+            cmd = '/Users/drodriguez/.composer/vendor/bin/phpcs'
+        }),
     }
 })
