@@ -1,5 +1,5 @@
 window:
-  opacity: 0.94
+  opacity: 1
   dimensions:
     columns: 140
     lines: 48
@@ -10,13 +10,13 @@ env:
 
 font:
   normal:
-    family: ComicCodeLigatures Nerd Font
-    style: Regular
+    family: Input Mono Compressed
+    style: Light
   bold:
-    family: ComicCodeLigatures Nerd Font
+    family: Input Mono Compressed
     style: Bold
   italic:
-    family: ComicCodeLigatures Nerd Font
+    family: Input Mono Compressed
     style: Italic
   size: 13.0
   offset:
