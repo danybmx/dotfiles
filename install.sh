@@ -6,3 +6,5 @@ mkdir ~/.config/alacritty
 ln -s $PWD/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 rm -r ~/.config/nvim || true
 ln -s $PWD/nvim $HOME/.config/nvim
+rm -r ~/.ideavimrc || true
+ln -s $PWD/ideavimrc $HOME/.ideavimrc
