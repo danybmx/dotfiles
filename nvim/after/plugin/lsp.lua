@@ -14,7 +14,8 @@ lsp.ensure_installed({
     "jsonls",
     "yamlls",
     "tailwindcss",
-    "emmet_ls"
+    "emmet_ls",
+    "gopls",
 })
 
 local cmp = require("cmp")
@@ -29,6 +30,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 
 lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+lspconfig.dartls.setup{}
 
 lsp.set_preferences({
     sign_icons = {}
@@ -51,6 +53,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set('n', '<leader>ps', telescope_builtin.lsp_document_symbols, {})
     vim.keymap.set('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<cr>')
     vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<cr>')
+    vim.keymap.set('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 end)
 
 lsp.format_on_save({
@@ -59,7 +62,7 @@ lsp.format_on_save({
         timeout_ms = 10000,
     },
     servers = {
-        ['null-ls'] = { 'javascript', 'html', 'typescript', 'vue', 'css', 'php' },
+        ['null-ls'] = { 'javascript', 'typescript', 'vue', 'css', 'php', 'javascriptreact', 'typescriptreact', 'go' },
     }
 })
 
@@ -70,6 +73,7 @@ local null_ls = require('null-ls')
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.prettierd,
+        null_ls.builtins.formatting.gofmt,
         null_ls.builtins.formatting.blade_formatter,
         null_ls.builtins.formatting.phpcsfixer.with({
             args = { '--allow-risky=yes', 'fix', '$FILENAME' },

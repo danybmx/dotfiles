@@ -30,7 +30,7 @@ nmap <C-h> :tabprev<CR>
 imap <C-h> :tabprev<CR>
 nmap <leader>s :action ActivateTerminalToolWindow<CR>
 nmap <leader>w :action HideAllWindows<CR>
-nmap <leader>z :action ToggleDistractionFreeMode<CR>
+nmap <leader>z :action ToggleZenMode<CR>
 nmap <leader>d :action ActivateProjectToolWindow<CR>
 nmap <leader>q :q<CR>
 nmap <leader>rc :action ContextRun<CR>
@@ -38,6 +38,22 @@ nmap <leader>rg :action RunContextGroup<CR>
 nmap <leader>rw :action ActivateRunToolWindow<CR>
 nmap <leader>rf :action RerunFailedTests<CR>
 nmap <leader>rn :action RenameElement<CR>
+nmap <leader>ir :action IdeaVim.ReloadVimRc.reload<CR>
 nnoremap <leader>= :action ReformatCode<CR>
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
+nnoremap ]d :action GotoNextError<CR>
+nnoremap [d :action GotoPreviousError<CR>
+
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+
+vnoremap < <gv
+vnoremap > >gv
+nnoremap <Leader>=  :action ReformatCode<CR>
+nnoremap <leader>o :action OptimizeImports<CR>
