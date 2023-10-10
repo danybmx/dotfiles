@@ -27,6 +27,8 @@ vim.keymap.set('v', '<leader>d', '"_d')
 
 vim.keymap.set('n', '<leader>c', ':bd<CR>')
 
+vim.keymap.set('n', '<leader>t', '<Plug>VimwikiToggleListItem')
+
 vim.keymap.set('n', '<leader><leader>', ':e#<CR>')
 
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')

@@ -1,75 +1,80 @@
 local ensure_packer = function()
-    local fn = vim.fn
-    local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-    if fn.empty(fn.glob(install_path)) > 0 then
-        fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
-        vim.cmd [[packadd packer.nvim]]
-        return true
-    end
-    return false
+  local fn = vim.fn
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
 end
 ensure_packer()
 
 return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
+  use 'wbthomason/packer.nvim'
 
-    use({
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.2',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    })
+  use({
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.2',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  })
 
-    use("ellisonleao/gruvbox.nvim")
+  use("ellisonleao/gruvbox.nvim")
 
-    use("folke/tokyonight.nvim")
+  use("folke/tokyonight.nvim")
 
-    -- use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use("sheerun/vim-polyglot")
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
-    use('ThePrimeagen/harpoon')
+  use('onsails/lspkind.nvim')
 
-    use('mbbill/undotree')
+  use("sheerun/vim-polyglot")
 
-    use('tpope/vim-fugitive')
+  use('ThePrimeagen/harpoon')
 
-    use('tpope/vim-surround')
+  use('mbbill/undotree')
 
-    use('tpope/vim-commentary')
+  use('tpope/vim-fugitive')
 
-    use('jose-elias-alvarez/null-ls.nvim')
+  use('tpope/vim-surround')
 
-    use('farmergreg/vim-lastplace')
+  use('tpope/vim-commentary')
 
-    use('mfussenegger/nvim-jdtls')
+  use('jose-elias-alvarez/null-ls.nvim')
 
-    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use('farmergreg/vim-lastplace')
 
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' },
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
+  use('vimwiki/vimwiki')
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-buffer' },
-            { 'hrsh7th/cmp-path' },
-            { 'saadparwaiz1/cmp_luasnip' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-nvim-lua' },
+  use('mfussenegger/nvim-jdtls')
 
-            -- Snippets
-            { 'L3MON4D3/LuaSnip' },
-            { 'rafamadriz/friendly-snippets' },
-        }
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
+
+      -- Autocompletion
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lua' },
+
+      -- Snippets
+      { 'L3MON4D3/LuaSnip' },
+      { 'rafamadriz/friendly-snippets' },
     }
+  }
 
-    -- Skip from my work computer
-    if (vim.loop.os_gethostname() ~= "H4LTF41GY0") then
-        use('zbirenbaum/copilot.lua')
-        use('zbirenbaum/copilot-cmp')
-    end
+  -- Skip from my work computer
+  if (vim.loop.os_gethostname() ~= "H4LTF41GY0") then
+    use('zbirenbaum/copilot.lua')
+    use('zbirenbaum/copilot-cmp')
+  end
 end)
