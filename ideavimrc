@@ -21,6 +21,7 @@ nmap <leader>S :action GotoSymbol<CR>
 nmap <leader>/ :action FindInPath<CR>
 nmap <leader>n :tabnext<CR>
 nmap <leader>p :tabprev<CR>
+nmap <leader>U :redo<CR>
 nmap gi :action GotoImplementation<CR>
 nmap gr :action ShowUsages<CR>
 nmap ga :action Go
