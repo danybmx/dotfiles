@@ -6,6 +6,7 @@ Plug 'machakann/vim-highlightedyank'
 let mapleader = " "
 set scrolloff=5
 set incsearch
+set ideamarks
 set number
 set relativenumber
 map Q gq
@@ -60,3 +61,9 @@ vnoremap < <gv
 vnoremap > >gv
 nnoremap <Leader>=  :action ReformatCode<CR>
 nnoremap <leader>o :action OptimizeImports<CR>
+
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+
+map <C-Tab> <Action>(PreviousTab)
+map <Tab> <Action>(NextTab)
