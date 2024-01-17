@@ -1,28 +1,26 @@
 window:
-  opacity: 1
+  opacity: 0.90
   dimensions:
     columns: 140
     lines: 48
   dynamic_padding: true
+  decorations: "none"
 
 env:
   TERM: xterm-256color
 
 font:
   normal:
-    family: MonoLisa Nerd Font
+    family: Maple Mono NF
     style: Light
   bold:
-    family: MonoLisa Nerd Font
+    family: Maple Mono NF
     style: Bold
   italic:
-    family: MonoLisa Nerd Font
+    family: Maple Mono NF
     style: Italic
-  size: 13.0
+  size: 15.0
   offset:
-    x: 0
-    y: 0
-  glyph_offset:
     x: 0
     y: 0
 

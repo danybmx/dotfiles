@@ -23,7 +23,7 @@ lsp.ensure_installed({
   "yamlls",
   "tailwindcss",
   "emmet_ls",
-  "gopls",
+  "gopls"
 })
 
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -89,6 +89,7 @@ null_ls.setup({
     null_ls.builtins.formatting.phpcsfixer.with({
       args = { '--allow-risky=yes', 'fix', '$FILENAME' },
     }),
+    null_ls.builtins.diagnostics.cspell,
     null_ls.builtins.diagnostics.php,
     null_ls.builtins.diagnostics.phpcs.with({
       extra_args = { '--standard', 'WordPress' },
