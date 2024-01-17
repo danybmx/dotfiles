@@ -19,8 +19,6 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   })
 
-  use("ellisonleao/gruvbox.nvim")
-
   use("folke/tokyonight.nvim")
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -42,8 +40,6 @@ return require('packer').startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
 
   use('farmergreg/vim-lastplace')
-
-  use('vimwiki/vimwiki')
 
   use('mfussenegger/nvim-jdtls')
 

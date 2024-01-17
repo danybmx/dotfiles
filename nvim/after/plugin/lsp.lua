@@ -18,7 +18,6 @@ lsp.ensure_installed({
   "lua_ls",
   "rust_analyzer",
   "volar",
-  "lemminx",
   "jsonls",
   "yamlls",
   "tailwindcss",
@@ -32,7 +31,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
   ['<C-y>'] = cmp.mapping.confirm({ select = true }),
   ['<C-CR>'] = cmp.mapping.confirm({ select = true }),
-  ['<CR>'] = cmp.mapping.confirm({ select = false }),
+  ['<CR>'] = cmp.mapping.confirm({ select = true }),
   ['<C-Space>'] = cmp.mapping.complete(),
 })
 
@@ -46,7 +45,6 @@ lsp.set_preferences({
 lsp.setup_nvim_cmp({
   sources = {
     { name = "nvim_lsp" },
-    -- { name = "copilot" },
     { name = "path" },
     { name = "luasnip" },
     { name = "buffer" },

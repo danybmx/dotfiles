@@ -9,6 +9,7 @@ set incsearch
 set ideamarks
 set number
 set relativenumber
+set visualbell
 map Q gq
 set gdefault                      " substitute all occurrences in line per default
 set history=10000                 " keep x lines of command line history
