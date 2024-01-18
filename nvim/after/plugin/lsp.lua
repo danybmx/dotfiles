@@ -87,7 +87,6 @@ null_ls.setup({
     null_ls.builtins.formatting.phpcsfixer.with({
       args = { '--allow-risky=yes', 'fix', '$FILENAME' },
     }),
-    null_ls.builtins.diagnostics.cspell,
     null_ls.builtins.diagnostics.php,
     null_ls.builtins.diagnostics.phpcs.with({
       extra_args = { '--standard', 'WordPress' },
