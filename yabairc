@@ -58,6 +58,7 @@ yabai -m rule --add app='Riot' manage=off
 
 # float settings windows
 yabai -m rule --add app='Settings$' manage=off
+yabai -m rule --add app='Activty Monitor$' manage=off
 
 # Some IDEA settings
 yabai -m rule --add app='.*IDEA.*' title='^$' manage=off
@@ -87,11 +88,11 @@ yabai -m space 8 --label media
 
 yabai -m rule --add app="Arc" space=^web
 yabai -m rule --add app="Google Chrome" space=^web
-yabai -m rule --add app="alacritty" space=^term
+yabai -m rule --add app="Alacritty" space=^term
 yabai -m rule --add app=".*IDEA.*" space=^code
 yabai -m rule --add app="PhpStorm" space=^code
 yabai -m rule --add app="WebStorm" space=^code
-yabai -m rule --add app="code" space=^code
+yabai -m rule --add app="Code" space=^code
 yabai -m rule --add app="Slack" space=^social
 yabai -m rule --add app="Obsidian" space=^notes
 yabai -m rule --add app="Notion" space=^notes
