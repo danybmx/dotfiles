@@ -43,6 +43,8 @@ return require('packer').startup(function(use)
 
   use('mfussenegger/nvim-jdtls')
 
+  use { "nvim-treesitter/nvim-treesitter-context" }
+
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
   use {
