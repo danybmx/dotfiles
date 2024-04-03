@@ -2,9 +2,10 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
-config.color_scheme = 'Batman'
-config.font = wezterm.font 'CaskaydiaCove Nerd Font'
-config.font_size = 14
+config.color_scheme = 'Tokyo Night'
+config.font = wezterm.font 'MartianMono Nerd Font'
+config.font_size = 12
+config.line_height = 1.2
 config.hide_tab_bar_if_only_one_tab = true
 config.keys = {
   {
@@ -16,7 +17,14 @@ config.keys = {
     key = 'd',
     mods = 'SHIFT|CMD',
     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
-  }
+  },
+  {
+    key = 'm',
+    mods = 'CMD',
+    action = wezterm.action.PaneSelect
+  },
 }
+config.initial_rows = 32
+config.initial_cols = 100
 
 return config

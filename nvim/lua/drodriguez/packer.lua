@@ -19,6 +19,24 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   })
 
+  use { 
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    requires = {'nvim-tree/nvim-web-devicons'},
+    config = function ()
+      require('dashboard').setup {
+        theme = 'hyper',
+        config = {
+          week_header = {
+            enable = true,
+          },
+          shortcut = {
+          }
+        },
+      }
+    end
+  }
+
   use("folke/tokyonight.nvim")
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
