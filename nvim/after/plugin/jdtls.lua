@@ -171,7 +171,7 @@ local function jdtls_setup(event)
     '-Dosgi.bundles.defaultStartLevel=4',
     '-Declipse.product=org.eclipse.jdt.ls.core.product',
     '-Dlog.protocol=true',
-    '-Djava.import.gradle.home=/Users/drodriguez/.gradle/wrapper/dists/gradle-8.2.1-1a1-bin/cq7vzieg4re243ryfus83btvf/gradle-8.2.1',
+    '-Djava.import.gradle.home=/Users/drodriguez/.gradle/wrapper/dists/gradle-8.5.1-1a1-bin/cq7vzieg4re243ryfus83btvf/gradle-8.5.1',
     '-Dlog.level=ALL',
     '-javaagent:' .. path.java_agent,
     '-Xms1g',
