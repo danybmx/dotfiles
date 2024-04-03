@@ -29,9 +29,9 @@ nmap gr :action ShowUsages<CR>
 nmap ga :action Go
 nmap gt :action GotoTest<CR>
 nmap <C-l> :tabnext<CR>
-imap <C-l> :tabnext<CR>
+imap <C-l> <ESC>:tabnext<CR>
 nmap <C-h> :tabprev<CR>
-imap <C-h> :tabprev<CR>
+imap <C-h> <ESC>:tabprev<CR>
 nmap <leader>s :action ActivateTerminalToolWindow<CR>
 nmap <leader>w :action HideAllWindows<CR>
 nmap <leader>z :action ToggleZenMode<CR>
