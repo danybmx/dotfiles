@@ -58,3 +58,7 @@ sudo dnf install -y luarocks
 
 # ZSH, TMUX
 sudo dnf install -y zsh tmux
+
+# OhMyZSH
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+
