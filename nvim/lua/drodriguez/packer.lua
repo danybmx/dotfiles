@@ -19,20 +19,20 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   })
 
-  use { 
-    'nvimdev/dashboard-nvim',
-    event = 'VimEnter',
-    requires = {'nvim-tree/nvim-web-devicons'},
-    config = function ()
-      require('dashboard').setup {
-        theme = 'hyper',
-        config = {
-          week_header = {
-            enable = true,
-          },
-          shortcut = {
-          }
-        },
+  use 'prisma/vim-prisma'
+
+  use {
+    "kyazdani42/nvim-tree.lua",
+    requires = "kyazdani42/nvim-web-devicons" ,
+    wants = "nvim-web-devicons",
+    config = function()
+      require("nvim-web-devicons").setup()
+
+      require("nvim-tree").setup {
+        hijack_cursor = true,
+        view = {
+          width = 40
+        }
       }
     end
   }
