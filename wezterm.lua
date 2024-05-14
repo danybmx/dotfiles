@@ -2,9 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-<<<<<<< Updated upstream
-config.color_scheme = 'Tokyo Night'
--- config.font = wezterm.font('CaskaydiaCove Nerd Font', { weight = 300 })
+config.color_scheme = 'Night Owl (Gogh)'
 config.font = wezterm.font('GeistMono Nerd Font', { weight = 400 })
 config.font_size = 13
 config.line_height = 1.1
@@ -14,29 +12,6 @@ config.window_padding = {
 	right = 4,
 	top = 4,
 	bottom = 4,
-=======
-config.color_scheme = "Tokyo Night"
-config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 13
-config.line_height = 1.1
-config.hide_tab_bar_if_only_one_tab = true
-config.keys = {
-	{
-		key = "d",
-		mods = "CMD",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "d",
-		mods = "SHIFT|CMD",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "m",
-		mods = "CMD",
-		action = wezterm.action.PaneSelect,
-	},
->>>>>>> Stashed changes
 }
 config.keys = {
 	{
