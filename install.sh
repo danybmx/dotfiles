@@ -11,3 +11,4 @@ rm -r ~/.ideavimrc || true
 ln -s $PWD/ideavimrc $HOME/.ideavimrc
 rm ~/.wezterm.lua || true
 ln -s $PWD/wezterm.lua $HOME/.wezterm.lua
+echo "source $PWD/zshrc-custom" >> ~/.zshrc
