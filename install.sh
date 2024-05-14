@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 rm ~/.tmux.conf || true
 ln -s $PWD/tmux.conf $HOME/.tmux.conf 
 rm -r ~/.config/alacritty || true
