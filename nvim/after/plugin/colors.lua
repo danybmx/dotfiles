@@ -1,5 +1,5 @@
 function SetColor(color)
-    color = color or "tokyonight-night"
+    color = color or "tokyonight-moon"
     vim.cmd.colorscheme(color)
     vim.cmd.highlight("iCursor guifg=black guibg=white")
     vim.opt.guicursor = "v-n-c:block-Cursor,i:block-Cursor"

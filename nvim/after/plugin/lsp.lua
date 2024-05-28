@@ -55,11 +55,11 @@ end)
 
 lsp_zero.format_on_save({
     format_opts = {
-      async = false,
+      async = true,
       timeout_ms = 10000,
     },
     servers = {
-      ['null-ls'] = { 'javascript', 'typescript', 'vue', 'css', 'php', 'javascriptreact', 'typescriptreact', 'go' },
+      ['null-ls'] = { 'javascript', 'typescript', 'vue', 'css', 'php', 'javascriptreact', 'typescriptreact', 'go', 'lua' },
     }
   })
 
@@ -70,6 +70,7 @@ local null_ls = require('null-ls')
 null_ls.setup({
     sources = {
       null_ls.builtins.formatting.prettierd,
+      null_ls.builtins.formatting.eslint,
       null_ls.builtins.formatting.gofmt,
       null_ls.builtins.formatting.blade_formatter,
       null_ls.builtins.formatting.phpcsfixer.with({
@@ -137,17 +138,26 @@ require('mason-lspconfig').setup({
             },
           })
       end,
-    },
-    lua_ls = function()
-      local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup {
-        settings = {
-            Lua = {
-                diagnostics = {
-                    globals = { 'vim' }
-                }
-            }
+      lua_ls = function()
+        require('lspconfig').lua_ls.setup {
+          settings = {
+              Lua = {
+                  diagnostics = {
+                      globals = { 'vim' }
+                  }
+              }
+          }
         }
-      }
-    end,
+      end,
+      eslint = function()
+        require('lspconfig').eslint.setup {
+          settings = {
+            codeActionOnSave = {
+                enable = true,
+                mode = "all"
+            },
+          }
+        }
+      end
+    },
   })
