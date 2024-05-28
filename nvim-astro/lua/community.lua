@@ -17,7 +17,6 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.dart" },
-  { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.ruby" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.tailwindcss" },
@@ -30,4 +29,5 @@ return {
   { import = "astrocommunity.colorscheme.night-owl-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.fugit2-nvim" },
+  { import = "astrocommunity.editing-support.multiple-cursors-nvim"},
 }
