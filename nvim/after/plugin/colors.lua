@@ -1,6 +1,7 @@
 function SetColor(color)
-    color = color or "tokyonight-moon"
+    color = color or "catppuccin-mocha"
     vim.cmd.colorscheme(color)
+    vim.g.airline_theme = color
     vim.cmd.highlight("iCursor guifg=black guibg=white")
     vim.opt.guicursor = "v-n-c:block-Cursor,i:block-Cursor"
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
