@@ -3,9 +3,9 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.color_scheme = 'Tokyo Night Moon'
-config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = 400 })
-config.font_size = 13
-config.line_height = 1.2
+config.font = wezterm.font('Berkeley Mono', { weight = 400 })
+config.font_size = 14
+config.line_height = 1
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
 	left = 4,
