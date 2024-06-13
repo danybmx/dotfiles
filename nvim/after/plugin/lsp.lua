@@ -4,6 +4,7 @@ local lspconfig = require("lspconfig")
 local lspkind = require('lspkind')
 local cmp = require("cmp")
 local builtin = require('telescope.builtin')
+local cmp_format = lsp_zero.cmp_format()
 
 lspkind.init({
     symbol_map = {
@@ -29,7 +30,9 @@ lsp_zero.set_preferences({
     sign_icons = {}
   })
 
-lsp_zero.setup_nvim_cmp({
+cmp.setup({
+    formatting = cmp_format,
+    mapping = cmp.mapping.preset.insert(cmp_mappings),
     sources = {
       { name = "copilot" },
       { name = "nvim_lsp" },
@@ -37,10 +40,11 @@ lsp_zero.setup_nvim_cmp({
       { name = "luasnip" },
       { name = "buffer" },
     },
-    formatting = {
-      format = lspkind.cmp_format({ mode = 'symbol', with_text = true, maxwidth = 50 })
-    },
-    mapping = cmp_mappings,
+    snippet = {
+      expand = function(args)
+        require('luasnip').lsp_expand(args.body)
+      end,
+    }
   })
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -141,11 +145,11 @@ require('mason-lspconfig').setup({
       lua_ls = function()
         require('lspconfig').lua_ls.setup {
           settings = {
-              Lua = {
-                  diagnostics = {
-                      globals = { 'vim' }
-                  }
+            Lua = {
+              diagnostics = {
+                globals = { 'vim' }
               }
+            }
           }
         }
       end,
@@ -153,8 +157,8 @@ require('mason-lspconfig').setup({
         require('lspconfig').eslint.setup {
           settings = {
             codeActionOnSave = {
-                enable = true,
-                mode = "all"
+              enable = true,
+              mode = "all"
             },
           }
         }

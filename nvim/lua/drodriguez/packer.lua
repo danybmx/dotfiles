@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
 
   use({
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.2',
     requires = { { 'nvim-lua/plenary.nvim' } }
   })
 
@@ -81,7 +80,7 @@ return require('packer').startup(function(use)
 
   use {
     'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
+    branch = 'v3.x',
     requires = {
       -- LSP Support
       { 'neovim/nvim-lspconfig' },
