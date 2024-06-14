@@ -1,5 +1,5 @@
 function SetColor(color)
-    color = color or "catppuccin-mocha"
+    color = color or "everforest"
     vim.cmd.colorscheme(color)
     vim.g.airline_theme = color
     vim.cmd.highlight("iCursor guifg=black guibg=white")

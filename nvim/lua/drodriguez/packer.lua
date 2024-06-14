@@ -38,6 +38,14 @@ return require('packer').startup(function(use)
 
   use('folke/tokyonight.nvim')
 
+  use({
+    "neanias/everforest-nvim",
+    -- Optional; default configuration will be used if setup isn't called.
+    config = function()
+      require("everforest").setup()
+    end,
+  })
+
   use { "catppuccin/nvim", as = "catppuccin" }
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -50,7 +58,7 @@ return require('packer').startup(function(use)
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'tokyonight'
+          theme = 'everforest'
         }
       }
     end
