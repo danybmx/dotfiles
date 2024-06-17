@@ -82,7 +82,25 @@ return require('packer').startup(function(use)
 
   use('mfussenegger/nvim-jdtls')
 
-  use { "nvim-treesitter/nvim-treesitter-context" }
+  use
+    {
+    "tpope/vim-rails",
+    config = function()
+      -- disable autocmd set filetype=eruby.yaml
+      vim.api.nvim_create_autocmd(
+        { 'BufNewFile', 'BufReadPost' },
+        {
+          pattern = { '*.yml' },
+          callback = function()
+            vim.bo.filetype = 'yaml'
+          end
+
+        }
+      )
+    end
+  }
+
+  -- use { "nvim-treesitter/nvim-treesitter-context" }
 
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 

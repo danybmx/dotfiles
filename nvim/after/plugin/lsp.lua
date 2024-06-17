@@ -18,6 +18,7 @@ local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp_zero.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
     ['<C-CR>'] = cmp.mapping.confirm({ select = true }),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
@@ -91,6 +92,9 @@ null_ls.setup({
 lspconfig.tsserver.setup({})
 lspconfig.volar.setup {
   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+}
+lspconfig.emmet_ls.setup {
+  filetypes = { 'html', 'css', 'javascript', 'typescript', 'vue' }
 }
 
 require('mason').setup({})
