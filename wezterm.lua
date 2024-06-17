@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.color_scheme = 'Everforest Dark (Gogh)'
+config.color_scheme = 'rose-pine-moon'
 config.font = wezterm.font('Iosevka Comfy', { weight = 400 })
 config.font_size = 14
 config.line_height = 1.1
