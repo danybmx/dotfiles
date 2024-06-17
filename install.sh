@@ -1,14 +1,23 @@
 #!/usr/bin/env zsh
 
 if [[ $(uname) == "Darwin" ]]; then
-  brew install coreutils zsh neovim
-  default write -g ApplePressAndHoldEnabled -bool false
+  brew install coreutils zsh neovim gnu-sed
+  defaults write -g ApplePressAndHoldEnabled -bool false
   defaults write -g InitialKeyRepeat -int 10
   defaults write -g KeyRepeat -int 1
 fi
 
-if [ ! -f $HOME/.oh-my-zsh ]; then
+if [ ! -d $HOME/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+if [ ! -d $HOME/.oh-my-zsh/custom/themes/powerlevel10k ]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
+  if command -v gsed; then
+    gsed -i '/^ZSH_THEME/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
+  else
+    sed -i '/^ZSH_THEME/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
+  fi
 fi
 
 rm ~/.tmux.conf || true
@@ -23,9 +32,5 @@ rm -r ~/.ideavimrc || true
 ln -s $PWD/ideavimrc $HOME/.ideavimrc
 rm ~/.wezterm.lua || true
 ln -s $PWD/wezterm.lua $HOME/.wezterm.lua
-
-while ! grep "zshrc-custom" $HOME/.zshrc > /dev/null; do
-  echo "\nsource $PWD/zshrc-custom" >> $HOME/.zshrc; 
-done
 
 source $HOME/.zshrc
