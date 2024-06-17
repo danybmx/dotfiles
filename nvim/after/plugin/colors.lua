@@ -1,5 +1,4 @@
 function SetColor(color)
-    color = color or "everforest"
     vim.cmd.colorscheme(color)
     vim.g.airline_theme = color
     vim.cmd.highlight("iCursor guifg=black guibg=white")
@@ -16,5 +15,5 @@ function SetColor(color)
     vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { bg = "none" })
 end
 
-SetColor()
+SetColor('rose-pine')
 
