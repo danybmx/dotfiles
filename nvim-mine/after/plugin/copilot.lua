@@ -1,4 +1,4 @@
-if (vim.loop.os_gethostname() ~= "H4LTF41GY0") then
+if (false) then
     require('copilot').setup({
         suggestion = { enabled = true },
         panel = { enabled = true },

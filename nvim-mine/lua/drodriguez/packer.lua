@@ -102,7 +102,7 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- use { "nvim-treesitter/nvim-treesitter-context" }
+  use { "nvim-treesitter/nvim-treesitter-context" }
 
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
@@ -130,7 +130,7 @@ return require('packer').startup(function(use)
   }
 
   -- Skip from my work computer
-  if (vim.loop.os_gethostname() ~= "H4LTF41GY0") then
+  if (false and vim.loop.os_gethostname() ~= "H4LTF41GY0") then
     use('zbirenbaum/copilot.lua')
     use('zbirenbaum/copilot-cmp')
   end
