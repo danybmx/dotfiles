@@ -7,7 +7,7 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "rose-pine",
+    colorscheme = "rose-pine-dawn",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
@@ -17,6 +17,7 @@ return {
         NotifyINFOBorder = { bg = "none", fg = "#FFFFFF"  },
         NotifyWARNBorder = { bg = "none", fg = "#FFFFFF"  },
         NotifyERRORBorder = { bg = "none", fg = "#FFFFFF"  },
+        FloatBorder = { bg = "none", fg = "#FFFFFF"  },
         NormalFloat = { bg = "none" },
         NormalNC = { bg = "none" },
         NormalSB = { bg = "none" },

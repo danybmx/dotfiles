@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.color_scheme = 'rose-pine-moon'
+config.color_scheme = 'rose-pine-dawn'
 config.font = wezterm.font('GeistMono Nerd Font', { weight = 400 })
 config.font_size = 13
 config.line_height = 1.2
