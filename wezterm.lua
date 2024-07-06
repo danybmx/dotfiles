@@ -34,7 +34,7 @@ local function split_nav(resize_or_move, key)
 end
 
 config.color_scheme = 'rose-pine-moon'
-config.font = wezterm.font('GeistMono Nerd Font', { weight = 400 })
+config.font = wezterm.font('Monaspace Argon', { weight = 400 })
 config.font_size = 13
 config.line_height = 1.2
 config.hide_tab_bar_if_only_one_tab = true

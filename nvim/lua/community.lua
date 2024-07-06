@@ -20,7 +20,7 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.color.nvim-highlight-colors" },
-  { import = "astrocommunity.completion.copilot-cmp" },
+  -- { import = "astrocommunity.completion.copilot-cmp" },
   { import = "astrocommunity.completion.cmp-emoji" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.git.diffview-nvim" },
