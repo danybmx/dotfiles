@@ -87,14 +87,6 @@ return require('packer').startup(function(use)
 
   use('farmergreg/vim-lastplace')
 
-  use({
-    "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    requires = {
-      "nvim-lua/plenary.nvim",
-    },
-  })
-
   use('mfussenegger/nvim-jdtls')
 
   use
