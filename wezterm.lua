@@ -33,13 +33,13 @@ local function split_nav(resize_or_move, key)
   }
 end
 
-config.color_scheme = 'rose-pine-moon'
-config.font = wezterm.font('Monaspace Neon', { weight = 400 })
-config.font_size = 13
+config.color_scheme = 'Oxocarbon Dark (Gogh)'
+config.font = wezterm.font('Monaspace Neon')
+config.font_size = 14
 config.line_height = 1.2
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 8
+-- config.window_background_opacity = 0.9
+-- config.macos_window_background_blur = 6
 config.window_padding = {
   left = 4,
   right = 4,

@@ -54,17 +54,24 @@ return require('packer').startup(function(use)
 
   use('onsails/lspkind.nvim')
 
+  use('nyoom-engineering/oxocarbon.nvim')
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'rose-pine'
+          theme = 'oxocarbon'
         }
       }
     end
   }
+
+  use({
+    "kdheepak/lazygit.nvim",
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  })
 
   use("sheerun/vim-polyglot")
 

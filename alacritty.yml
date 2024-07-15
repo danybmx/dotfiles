@@ -11,15 +11,15 @@ env:
 
 font:
   normal:
-    family: MartianMono Nerd Font
+    family: GeistMono Nerd Font
     style: Regular
   bold:
-    family: MartianMono Nerd Font
+    family: GeistMono Nerd Font
     style: Bold
   italic:
-    family: MartianMono Nerd Font
+    family: GeistMono Nerd Font
     style: Italic
-  size: 12.0
+  size: 16.0
 
 shell:
   program: /usr/local/bin/zsh
