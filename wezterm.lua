@@ -34,17 +34,17 @@ local function split_nav(resize_or_move, key)
 end
 
 config.color_scheme = 'rose-pine-moon'
-config.font = wezterm.font('Monaspace Argon', { weight = 400 })
+config.font = wezterm.font('Monaspace Neon', { weight = 400 })
 config.font_size = 13
 config.line_height = 1.2
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.9
-config.macos_window_background_blur = 4
+config.macos_window_background_blur = 8
 config.window_padding = {
-	left = 4,
-	right = 4,
-	top = 4,
-	bottom = 4,
+  left = 4,
+  right = 4,
+  top = 4,
+  bottom = 4,
 }
 -- Leader is the same as my old tmux prefix
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
@@ -70,6 +70,11 @@ config.keys = {
     key = "Space",
     action = wezterm.action.RotatePanes "Clockwise"
   },
+  {
+    mods = "LEADER",
+    key = "q",
+    action = wezterm.action.CloseCurrentPane { confirm = false }
+  },
   -- show the pane selection mode, but have it swap the active and selected panes
   {
     mods = 'LEADER',
@@ -89,21 +94,21 @@ config.keys = {
   split_nav('resize', 'j'),
   split_nav('resize', 'k'),
   split_nav('resize', 'l'),
-	{
-		key = "d",
-		mods = "CMD",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "d",
-		mods = "SHIFT|CMD",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "m",
-		mods = "CMD",
-		action = wezterm.action.PaneSelect,
-	},
+  {
+    key = "d",
+    mods = "CMD",
+    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+  },
+  {
+    key = "d",
+    mods = "SHIFT|CMD",
+    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+  },
+  {
+    key = "m",
+    mods = "CMD",
+    action = wezterm.action.PaneSelect,
+  },
 }
 config.initial_rows = 40
 config.initial_cols = 140
@@ -113,4 +118,3 @@ config.send_composed_key_when_right_alt_is_pressed = true
 
 
 return config
-

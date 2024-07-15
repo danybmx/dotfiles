@@ -72,8 +72,6 @@ return require('packer').startup(function(use)
 
   use('mbbill/undotree')
 
-  use('tpope/vim-fugitive')
-
   use('tpope/vim-surround')
 
   use('tpope/vim-commentary')
@@ -82,10 +80,18 @@ return require('packer').startup(function(use)
 
   use('farmergreg/vim-lastplace')
 
+  use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  })
+
   use('mfussenegger/nvim-jdtls')
 
   use
-    {
+  {
     "tpope/vim-rails",
     config = function()
       -- disable autocmd set filetype=eruby.yaml
@@ -105,6 +111,8 @@ return require('packer').startup(function(use)
   use { "nvim-treesitter/nvim-treesitter-context" }
 
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+
+  use { 'mrjones2014/smart-splits.nvim' }
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -129,9 +137,6 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- Skip from my work computer
-  if (false and vim.loop.os_gethostname() ~= "H4LTF41GY0") then
-    use('zbirenbaum/copilot.lua')
-    use('zbirenbaum/copilot-cmp')
-  end
+  use('zbirenbaum/copilot.lua')
+  use('zbirenbaum/copilot-cmp')
 end)

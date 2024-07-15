@@ -47,6 +47,7 @@ nmap <leader>rf :action RerunFailedTests<CR>
 nmap <leader>rn :action RenameElement<CR>
 nmap <leader>ir :action IdeaVim.ReloadVimRc.reload<CR>
 nnoremap <leader>= :action ReformatCode<CR>
+nnoremap <leader>lf :action ReformatCode<CR>
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
 nnoremap ]d :action GotoNextError<CR>
