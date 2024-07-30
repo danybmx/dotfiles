@@ -33,9 +33,9 @@ local function split_nav(resize_or_move, key)
   }
 end
 
-config.color_scheme = 'Oxocarbon Dark (Gogh)'
-config.font = wezterm.font('Monaspace Neon')
-config.font_size = 14
+config.color_scheme = 'Zenburn (Gogh)'
+config.font = wezterm.font('GeistMono Nerd Font')
+config.font_size = 15
 config.line_height = 1.2
 config.hide_tab_bar_if_only_one_tab = true
 -- config.window_background_opacity = 0.9

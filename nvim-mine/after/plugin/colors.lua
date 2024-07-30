@@ -16,5 +16,5 @@ function SetColor(color)
     vim.api.nvim_set_hl(0, "Visual", { bg = "white", fg = "black" })
 end
 
-SetColor('tokyonight')
+SetColor('zenbones')
 

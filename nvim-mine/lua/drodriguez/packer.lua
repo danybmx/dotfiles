@@ -36,25 +36,17 @@ return require('packer').startup(function(use)
     end
   }
 
-  use('folke/tokyonight.nvim')
-
-  use({
-    "neanias/everforest-nvim",
-    -- Optional; default configuration will be used if setup isn't called.
-    config = function()
-      require("everforest").setup()
-    end,
-  })
-
-  use { "catppuccin/nvim", as = "catppuccin" }
-
-  use { "rose-pine/neovim", as = "rose-pine" }
+  use {
+    "zenbones-theme/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    -- In Vim, compat mode is turned on as Lush only works in Neovim.
+    requires = "rktjmp/lush.nvim"
+  }
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
   use('onsails/lspkind.nvim')
-
-  use('nyoom-engineering/oxocarbon.nvim')
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -62,7 +54,7 @@ return require('packer').startup(function(use)
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'oxocarbon'
+          theme = 'zenbones'
         }
       }
     end
