@@ -33,8 +33,8 @@ local function split_nav(resize_or_move, key)
   }
 end
 
-config.color_scheme = 'Zenburn (Gogh)'
-config.font = wezterm.font('GeistMono Nerd Font')
+config.color_scheme = 'Sonokai (Gogh)'
+config.font = wezterm.font('Monaspace Neon')
 config.font_size = 15
 config.line_height = 1.2
 config.hide_tab_bar_if_only_one_tab = true
