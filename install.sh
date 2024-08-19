@@ -4,7 +4,7 @@ if [[ $(uname) == "Darwin" ]]; then
   brew install coreutils zsh neovim gnu-sed
   defaults write -g ApplePressAndHoldEnabled -bool false
   defaults write -g InitialKeyRepeat -int 15
-  defaults write -g KeyRepeat -int 2
+  defaults write -g KeyRepeat -int 1
 fi
 
 if [ ! -d $HOME/.oh-my-zsh ]; then
