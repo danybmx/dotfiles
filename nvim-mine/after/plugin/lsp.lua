@@ -96,7 +96,7 @@ lsp_zero.format_on_save({
     timeout_ms = 10000,
   },
   servers = {
-    ['null-ls'] = { 'javascript', 'typescript', 'vue', 'css', 'php', 'javascriptreact', 'typescriptreact', 'go', 'lua' },
+    ['null-ls'] = { 'javascript', 'typescript', 'vue', 'css', 'php', 'javascriptreact', 'typescriptreact', 'lua' },
   }
 })
 
@@ -109,7 +109,7 @@ null_ls.setup({
   sources = {
     null_ls.builtins.formatting.prettierd,
     -- null_ls.builtins.formatting.eslint,
-    null_ls.builtins.formatting.gofmt,
+    -- null_ls.builtins.formatting.gofmt,
     null_ls.builtins.formatting.blade_formatter,
     null_ls.builtins.formatting.phpcsfixer.with({
       args = { '--allow-risky=yes', 'fix', '$FILENAME' },
@@ -124,7 +124,7 @@ null_ls.setup({
 
 lspconfig.tsserver.setup({})
 lspconfig.volar.setup {
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+  filetypes = { 'vue' }
 }
 lspconfig.emmet_ls.setup {
   filetypes = { 'html', 'css', 'javascript', 'typescript', 'vue' }
@@ -142,7 +142,7 @@ require('mason-lspconfig').setup({
     "yamlls",
     "tailwindcss",
     "emmet_ls",
-    "gopls"
+    -- "gopls"
   },
   handlers = {
     function(server_name)

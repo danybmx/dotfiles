@@ -35,11 +35,11 @@ end
 
 config.color_scheme = 'Sonokai (Gogh)'
 config.font = wezterm.font('FiraCode Nerd Font')
-config.font_size = 14
+config.font_size = 15
 config.line_height = 1.1
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 6
+-- config.window_background_opacity = 0.9
+-- config.macos_window_background_blur = 6
 config.window_padding = {
   left = 4,
   right = 4,
