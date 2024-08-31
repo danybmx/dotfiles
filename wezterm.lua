@@ -35,7 +35,7 @@ local function split_nav(resize_or_move, key)
 end
 
 config.color_scheme = 'Sonokai (Gogh)'
-config.font = wezterm.font('FiraCode Nerd Font')
+config.font = wezterm.font('Zed Mono Extended')
 config.font_size = 15
 config.line_height = 1.1
 config.hide_tab_bar_if_only_one_tab = true
