@@ -30,6 +30,9 @@ ln -s $PWD/nvim-mine $HOME/.config/nvim
 rm -r ~/.ideavimrc || true
 ln -s $PWD/ideavimrc $HOME/.ideavimrc
 rm ~/.wezterm.lua || true
-ln -s $PWD/wezterm.lua $HOME/.wezterm.lua
-
 source $HOME/.zshrc
+rm ~/.config/zed/settings.json
+ln -s $PWD/zed/settings.json ~/.config/zed/settings.json
+rm ~/.config/zed/keymap.json
+ln -s $PWD/zed/keyman.json ~/.config/zed/keyman.json
+
