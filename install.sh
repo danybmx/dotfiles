@@ -21,7 +21,7 @@ if [ ! -d $HOME/.oh-my-zsh/custom/themes/powerlevel10k ]; then
 fi
 
 rm ~/.tmux.conf || true
-ln -s $PWD/tmux.conf $HOME/.tmux.conf 
+ln -s $PWD/tmux.conf $HOME/.tmux.conf
 rm -r ~/.config/alacritty || true
 mkdir ~/.config/alacritty
 ln -s $PWD/alacritty.yml $HOME/.config/alacritty/alacritty.yml
@@ -30,9 +30,10 @@ ln -s $PWD/nvim-mine $HOME/.config/nvim
 rm -r ~/.ideavimrc || true
 ln -s $PWD/ideavimrc $HOME/.ideavimrc
 rm ~/.wezterm.lua || true
-source $HOME/.zshrc
+ln -s $PWD/wezterm.lua $HOME/.wezterm.lua
 rm ~/.config/zed/settings.json
 ln -s $PWD/zed/settings.json ~/.config/zed/settings.json
 rm ~/.config/zed/keymap.json
 ln -s $PWD/zed/keyman.json ~/.config/zed/keyman.json
 
+source $HOME/.zshrc
