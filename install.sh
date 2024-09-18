@@ -11,13 +11,12 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-if [ ! -d $HOME/.oh-my-zsh/custom/themes/powerlevel10k ]; then
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
-  if command -v gsed; then
-    gsed -i '/^ZSH_THEME/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
-  else
-    sed -i '/^ZSH_THEME/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
-  fi
+rm $HOME/.oh-my-zsh/custom/themes/dpstudios.zsh-theme || true
+ln -s $PWD/dpstudios.zsh-theme $HOME/.oh-my-zsh/custom/themes/dpstudios.zsh-theme 
+if command -v gsed; then
+  gsed -i '/^ZSH_THEME/c\ZSH_THEME="dpstudios"' ~/.zshrc
+else
+  sed -i '/^ZSH_THEME/c\ZSH_THEME="dpstudios"' ~/.zshrc
 fi
 
 rm ~/.tmux.conf || true
@@ -34,6 +33,4 @@ ln -s $PWD/wezterm.lua $HOME/.wezterm.lua
 rm ~/.config/zed/settings.json
 ln -s $PWD/zed/settings.json ~/.config/zed/settings.json
 rm ~/.config/zed/keymap.json
-ln -s $PWD/zed/keyman.json ~/.config/zed/keyman.json
-
-source $HOME/.zshrc
+ln -s $PWD/zed/keymap.json ~/.config/zed/keymap.json
