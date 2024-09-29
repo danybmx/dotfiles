@@ -36,28 +36,15 @@ return require('packer').startup(function(use)
     end
   }
 
-  use {
-    "zenbones-theme/zenbones.nvim",
-    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-    -- In Vim, compat mode is turned on as Lush only works in Neovim.
-    requires = "rktjmp/lush.nvim"
-  }
-
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
   use('onsails/lspkind.nvim')
 
+  use('folke/tokyonight.nvim')
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-    config = function()
-      require('lualine').setup {
-        options = {
-          theme = 'zenbones'
-        }
-      }
-    end
   }
 
   use({
@@ -126,6 +113,20 @@ return require('packer').startup(function(use)
       { 'L3MON4D3/LuaSnip' },
       { 'rafamadriz/friendly-snippets' },
     }
+  }
+
+  use {
+    'CopilotC-Nvim/CopilotChat.nvim',
+    branch = "canary",
+    requires = {
+      { 'nvim-lua/plenary.nvim' }
+    },
+    config = function()
+      require("CopilotChat").setup {
+        debug = true, -- Enable debugging
+        -- See Configuration section for rest
+      }
+    end
   }
 
   use('zbirenbaum/copilot.lua')

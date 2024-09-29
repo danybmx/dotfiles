@@ -34,8 +34,9 @@ local function split_nav(resize_or_move, key)
   }
 end
 
-config.color_scheme = 'Sonokai (Gogh)'
-config.font = wezterm.font('BlexMono Nerd Font')
+config.color_scheme = 'Tokyo Night'
+config.font = wezterm.font('CommitMono Nerd Font')
+-- config.font = wezterm.font('ComicShannsMono Nerd Font')
 config.font_size = 15
 config.line_height = 1.1
 config.hide_tab_bar_if_only_one_tab = true
