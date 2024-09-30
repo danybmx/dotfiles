@@ -1,5 +1,4 @@
 local wezterm = require("wezterm")
-local mux = wezterm.mux
 local config = wezterm.config_builder()
 
 local function is_vim(pane)
@@ -37,11 +36,12 @@ end
 config.color_scheme = 'Tokyo Night'
 config.font = wezterm.font('CommitMono Nerd Font')
 -- config.font = wezterm.font('ComicShannsMono Nerd Font')
-config.font_size = 15
+config.font_size = 16
 config.line_height = 1.1
 config.hide_tab_bar_if_only_one_tab = true
--- config.window_background_opacity = 0.9
--- config.macos_window_background_blur = 6
+config.window_background_opacity = 0.9
+config.macos_window_background_blur = 6
+config.native_macos_fullscreen_mode = true
 config.window_padding = {
   left = 4,
   right = 4,
