@@ -18,8 +18,6 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   })
 
-  use 'prisma/vim-prisma'
-
   use {
     "kyazdani42/nvim-tree.lua",
     requires = "kyazdani42/nvim-web-devicons",
@@ -52,8 +50,6 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   })
 
-  use("sheerun/vim-polyglot")
-
   use('ThePrimeagen/harpoon')
 
   use('mbbill/undotree')
@@ -66,29 +62,7 @@ return require('packer').startup(function(use)
 
   use('farmergreg/vim-lastplace')
 
-  use('mfussenegger/nvim-jdtls')
-
-  use
-  {
-    "tpope/vim-rails",
-    config = function()
-      -- disable autocmd set filetype=eruby.yaml
-      vim.api.nvim_create_autocmd(
-        { 'BufNewFile', 'BufReadPost' },
-        {
-          pattern = { '*.yml' },
-          callback = function()
-            vim.bo.filetype = 'yaml'
-          end
-
-        }
-      )
-    end
-  }
-
   use { "nvim-treesitter/nvim-treesitter-context" }
-
-  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
   use { 'mrjones2014/smart-splits.nvim' }
 
@@ -114,21 +88,4 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
-
-  use {
-    'CopilotC-Nvim/CopilotChat.nvim',
-    branch = "canary",
-    requires = {
-      { 'nvim-lua/plenary.nvim' }
-    },
-    config = function()
-      require("CopilotChat").setup {
-        debug = true, -- Enable debugging
-        -- See Configuration section for rest
-      }
-    end
-  }
-
-  use('zbirenbaum/copilot.lua')
-  use('zbirenbaum/copilot-cmp')
 end)

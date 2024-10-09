@@ -15,8 +15,10 @@
   "soft_wrap": "prefer_line",
   "ui_font_size": 15,
   "buffer_font_size": 15,
-  "buffer_font_family": "Zed Plex Mono",
-  "scrollbar": { "show": "never" },
+  "buffer_font_family": "Intel One Mono",
+  "scrollbar": {
+    "show": "never"
+  },
   "scroll_beyond_last_line": "one_page",
   "vertical_scroll_margin": 10,
   "gutter": {
@@ -27,7 +29,7 @@
     "light": "Fleet Light",
     "dark": "Tokyo Night"
   },
-  "format_on_save": "language_server,prettier,eslint",
+  "format_on_save": "language_server",
   "languages": {
     "JavaScript": {
       "code_actions_on_format": {
