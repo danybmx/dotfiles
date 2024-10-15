@@ -3,52 +3,46 @@
 
 ---@type LazySpec
 return {
-  "AstroNvim/astroui",
-  ---@type AstroUIOpts
-  opts = {
-    -- change colorscheme
-    colorscheme = "sonokai",
-    -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
-    highlights = {
-      init = { -- this table overrides highlights in all themes
-        Normal = { bg = "none" },
-        NotifyBackground = { bg = "#000000" },
-        NotifyDEBUGBorder = { bg = "none", fg = "#FFFFFF" },
-        NotifyINFOBorder = { bg = "none", fg = "#FFFFFF"  },
-        NotifyWARNBorder = { bg = "none", fg = "#FFFFFF"  },
-        NotifyERRORBorder = { bg = "none", fg = "#FFFFFF"  },
-        FloatBorder = { bg = "none", fg = "#FFFFFF"  },
-        NormalFloat = { bg = "none" },
-        NormalNC = { bg = "none" },
-        NormalSB = { bg = "none" },
-        TelescopePromptNormal = { bg = "none" },
-        TelescopeResultsNormal = { bg = "none" },
-        TelescopeBorder = { bg = "none" },
-        TelescopePreviewNormal = { bg = "none" },
-        TelescopePromptBorder = { bg = "none" },
-        TelescopeResultsBorder = { bg = "none" },
-        TelescopePreviewBorder = { bg = "none" },
-        CursorColumn = { bg = "none" },
-        CursorLine = { bg = "none" },
-        CursorLineNr = { bg = "none" },
+  {
+    "maxmx03/fluoromachine.nvim",
+    lazy = true,
+    config = function()
+      require("fluoromachine").setup {
+        glow = false,
+        theme = "delta",
+        transparent = true,
+      }
+    end,
+  },
+  {
+    "AstroNvim/astroui",
+    ---@type AstroUIOpts
+    opts = {
+      -- change colorscheme
+      colorscheme = "fluoromachine",
+      -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
+      highlights = {
+        init = { -- this table overrides highlights in all themes
+          -- Normal = { bg = "#000000" },
+        },
+        astrodark = { -- a table of overrides/changes when applying the astrotheme theme
+          -- Normal = { bg = "#000000" },
+        },
       },
-      astrotheme = { -- a table of overrides/changes when applying the astrotheme theme
-        -- Normal = { bg = "#000000" },
+      -- Icons can be configured throughout the interface
+      icons = {
+        -- configure the loading of the lsp in the status line
+        LSPLoading1 = "⠋",
+        LSPLoading2 = "⠙",
+        LSPLoading3 = "⠹",
+        LSPLoading4 = "⠸",
+        LSPLoading5 = "⠼",
+        LSPLoading6 = "⠴",
+        LSPLoading7 = "⠦",
+        LSPLoading8 = "⠧",
+        LSPLoading9 = "⠇",
+        LSPLoading10 = "⠏",
       },
-    },
-    -- Icons can be configured throughout the interface
-    icons = {
-      -- configure the loading of the lsp in the status line
-      LSPLoading1 = "⠋",
-      LSPLoading2 = "⠙",
-      LSPLoading3 = "⠹",
-      LSPLoading4 = "⠸",
-      LSPLoading5 = "⠼",
-      LSPLoading6 = "⠴",
-      LSPLoading7 = "⠦",
-      LSPLoading8 = "⠧",
-      LSPLoading9 = "⠇",
-      LSPLoading10 = "⠏",
     },
   },
 }
