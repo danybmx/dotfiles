@@ -2,7 +2,9 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 local function is_vim(pane)
-	return pane:get_user_vars().IS_NVIM == "true"
+	local process_name = string.gsub(pane:get_foreground_process_name(), "(.*[/\\])(.*)", "%2")
+	print(process_name)
+	return process_name == "nvim" or process_name == "vim"
 end
 
 local direction_keys = {
@@ -35,7 +37,7 @@ end
 
 config.color_scheme = "Tokyo Night"
 config.font = wezterm.font("FiraCode Nerd Font")
-config.font_size = 15
+config.font_size = 14
 config.line_height = 1.3
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.95
