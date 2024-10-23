@@ -36,9 +36,10 @@ local function split_nav(resize_or_move, key)
 end
 
 config.color_scheme = "Tokyo Night"
-config.font = wezterm.font("FiraCode Nerd Font")
-config.font_size = 14
-config.line_height = 1.3
+-- config.font = wezterm.font("mplus Nerd Font Mono")
+config.font = wezterm.font("PragmataPro Mono")
+config.font_size = 16
+config.line_height = 1.2
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.95
 config.macos_window_background_blur = 6
