@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.tailwindcss" },
-  { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
 }

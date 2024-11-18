@@ -3,7 +3,6 @@ local config = wezterm.config_builder()
 
 local function is_vim(pane)
 	local process_name = string.gsub(pane:get_foreground_process_name(), "(.*[/\\])(.*)", "%2")
-	print(process_name)
 	return process_name == "nvim" or process_name == "vim"
 end
 
@@ -37,11 +36,13 @@ end
 
 config.color_scheme = "Tokyo Night"
 -- config.font = wezterm.font("mplus Nerd Font Mono")
+-- config.font = wezterm.font("M+1Code Nerd Font Mono")
+-- config.font = wezterm.font("CommitMono Nerd Font")
 config.font = wezterm.font("PragmataPro Mono")
 config.font_size = 16
-config.line_height = 1.2
+config.line_height = 1.3
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.92
 config.macos_window_background_blur = 6
 config.native_macos_fullscreen_mode = true
 config.window_padding = {
