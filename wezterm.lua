@@ -38,7 +38,9 @@ config.color_scheme = "Tokyo Night"
 -- config.font = wezterm.font("mplus Nerd Font Mono")
 -- config.font = wezterm.font("M+1Code Nerd Font Mono")
 -- config.font = wezterm.font("CommitMono Nerd Font")
-config.font = wezterm.font("PragmataPro Mono")
+-- config.font = wezterm.font("GoMono Nerd Font")
+-- config.font = wezterm.font("Fira Code")
+config.font = wezterm.font("Monaspace Argon")
 config.font_size = 16
 config.line_height = 1.3
 config.hide_tab_bar_if_only_one_tab = true
@@ -142,6 +144,8 @@ wezterm.on("gui-startup", function()
 
 	gui_window:set_position(x, y)
 end)
+
+config.scrollback_lines = 10000000
 
 config.colors = {
 	foreground = "#EFEFFD",
