@@ -34,7 +34,7 @@ local function split_nav(resize_or_move, key)
 	}
 end
 
-config.color_scheme = "rose-pine"
+config.color_scheme = "Catppuccin Latte"
 -- config.font =
 -- wezterm.font_with_fallback({ { family = "Jetsevka", weight = 500 }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font("M+1Code Nerd Font Mono")
@@ -148,27 +148,5 @@ wezterm.on("gui-startup", function()
 end)
 
 config.scrollback_lines = 10000000
-
-config.colors = {
-	foreground = "#EFEFFD",
-	background = "#2B2233",
-	cursor_bg = "#F8F8F8",
-	cursor_fg = "#282a36",
-	cursor_border = "#282a36",
-	selection_fg = "white",
-	selection_bg = "#492949",
-	scrollbar_thumb = "#222222",
-	split = "#444444",
-	ansi = {
-		"black",
-		"#FF98B3",
-		"#C0FF98",
-		"#EDFF98",
-		"#FFD298",
-		"#FF67D4",
-		"#98FFFB",
-		"silver",
-	},
-}
 
 return config
