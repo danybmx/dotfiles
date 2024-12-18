@@ -39,12 +39,12 @@ config.color_scheme = "Catppuccin Mocha"
 -- wezterm.font_with_fallback({ { family = "Jetsevka", weight = 500 }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font("M+1Code Nerd Font Mono")
 -- config.font = wezterm.font("GoMono Nerd Font")
-config.font = wezterm.font("Fira Code")
+-- config.font = wezterm.font("Fira Code")
 -- config.font = wezterm.font("Monaspace Neon")
 -- config.font = wezterm.font("ComicShannsMono Nerd Font")
--- config.font = wezterm.font("AnonymicePro Nerd Font")
-config.font_size = 13
-config.line_height = 1.3
+config.font = wezterm.font("AnonymicePro Nerd Font")
+config.font_size = 14
+config.line_height = 1.4
 config.hide_tab_bar_if_only_one_tab = true
 -- config.window_background_opacity = 0.92
 -- config.macos_window_background_blur = 6
