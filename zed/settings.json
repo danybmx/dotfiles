@@ -9,7 +9,7 @@
   "project_panel": {
     "dock": "right"
   },
-  "vim_mode": true,
+  "vim_mode": false,
   "relative_line_numbers": true,
   "linked_edits": true,
   "soft_wrap": "prefer_line",
