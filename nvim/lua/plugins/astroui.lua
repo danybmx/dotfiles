@@ -8,7 +8,7 @@ return {
     ---@type AstroUIOpts
     opts = {
       -- change colorscheme
-      colorscheme = "eldritch",
+      colorscheme = "nord",
       -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
       highlights = {
         -- set highlights for all themes
