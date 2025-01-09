@@ -18,7 +18,18 @@ return {
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.colorscheme.nord-nvim" },
-  { import = "astrocommunity.editing-support.copilotchat-nvim" },
+  {
+    import = "astrocommunity.editing-support.copilotchat-nvim",
+    opts = {
+      window = {
+        layout = "float",
+        relative = "cursor",
+        width = 1,
+        height = 0.4,
+        row = 1,
+      },
+    },
+  },
   { import = "astrocommunity.editing-support.bigfile-nvim" },
   { import = "astrocommunity.editing-support.comment-box-nvim" },
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
