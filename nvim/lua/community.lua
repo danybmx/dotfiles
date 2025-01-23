@@ -17,7 +17,7 @@ return {
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.colorscheme.nord-nvim" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   {
     import = "astrocommunity.editing-support.copilotchat-nvim",
     opts = {

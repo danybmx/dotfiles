@@ -9,7 +9,7 @@
   "project_panel": {
     "dock": "right"
   },
-  "vim_mode": false,
+  "vim_mode": true,
   "relative_line_numbers": true,
   "linked_edits": true,
   "soft_wrap": "prefer_line",
@@ -26,8 +26,8 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Fleet Light",
-    "dark": "Tokyo Night"
+    "light": "Fleet Gray",
+    "dark": "Fleet Dark"
   },
   "format_on_save": "language_server",
   "languages": {

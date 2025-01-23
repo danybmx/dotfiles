@@ -57,17 +57,19 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 	window:set_config_overrides(overrides)
 end)
 
-config.color_scheme = "nord"
--- wezterm.font_with_fallback({ { family = "Jetsevka", weight = 500 }, { family = "GoMono Nerd Font Mono" } })
+config.color_scheme = "Tokyo Night"
+-- config.font = wezterm.font_with_fallback({ { family = "Jetsevka", weight = 500 }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font("M+1Code Nerd Font Mono")
 -- config.font = wezterm.font("GoMono Nerd Font")
 -- config.font = wezterm.font("Fira Code")
-config.font = wezterm.font("MonoLisa")
+-- config.font = wezterm.font("MonoLisa")
 -- config.font = wezterm.font("Monaspace Neon")
 -- config.font = wezterm.font("ComicShannsMono Nerd Font")
 -- config.font = wezterm.font("Monaspace Neon")
 -- config.font = wezterm.font("AnonymicePro Nerd Font")
-config.font_size = 14
+config.font = wezterm.font_with_fallback({ { family = "Dank Mono" }, { family = "GoMono Nerd Font Mono" } })
+-- config.font = wezterm.font_with_fallback({ { family = "Comic Mono" }, { family = "GoMono Nerd Font Mono" } })
+config.font_size = 18
 config.line_height = 1.4
 config.hide_tab_bar_if_only_one_tab = true
 -- config.window_background_opacity = 0.92
