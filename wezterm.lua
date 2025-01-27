@@ -64,12 +64,13 @@ config.color_scheme = "Tokyo Night"
 -- config.font = wezterm.font("Fira Code")
 -- config.font = wezterm.font("MonoLisa")
 -- config.font = wezterm.font("Monaspace Neon")
+config.font = wezterm.font("CommitMono Nerd Font")
 -- config.font = wezterm.font("ComicShannsMono Nerd Font")
 -- config.font = wezterm.font("Monaspace Neon")
 -- config.font = wezterm.font("AnonymicePro Nerd Font")
-config.font = wezterm.font_with_fallback({ { family = "Dank Mono" }, { family = "GoMono Nerd Font Mono" } })
+-- config.font = wezterm.font_with_fallback({ { family = "Dank Mono" }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font_with_fallback({ { family = "Comic Mono" }, { family = "GoMono Nerd Font Mono" } })
-config.font_size = 18
+config.font_size = 14
 config.line_height = 1.4
 config.hide_tab_bar_if_only_one_tab = true
 -- config.window_background_opacity = 0.92
@@ -145,6 +146,11 @@ config.keys = {
 		mods = "CMD",
 		action = wezterm.action.PaneSelect,
 	},
+	{
+		key = "w",
+		mods = "CMD",
+		action = wezterm.action.CloseCurrentPane({ confirm = true }),
+	},
 }
 config.initial_rows = 40
 config.initial_cols = 140
@@ -161,8 +167,8 @@ wezterm.on("gui-startup", function()
 	-- Set dimensions to 85% of current screen size
 	-- The actual dimensions will be a bit bigger if we take into
 	-- account the decorations on top
-	local width = screen.width * 0.80
-	local height = screen.height * 0.80
+	local width = screen.width * 0.40
+	local height = screen.height * 0.50
 
 	gui_window:set_inner_size(width, height)
 
