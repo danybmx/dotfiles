@@ -64,17 +64,18 @@ config.color_scheme = "Tokyo Night"
 -- config.font = wezterm.font("Fira Code")
 -- config.font = wezterm.font("MonoLisa")
 -- config.font = wezterm.font("Monaspace Neon")
-config.font = wezterm.font("CommitMono Nerd Font")
+-- config.font = wezterm.font("CommitMono Nerd Font")
 -- config.font = wezterm.font("ComicShannsMono Nerd Font")
 -- config.font = wezterm.font("Monaspace Neon")
 -- config.font = wezterm.font("AnonymicePro Nerd Font")
 -- config.font = wezterm.font_with_fallback({ { family = "Dank Mono" }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font_with_fallback({ { family = "Comic Mono" }, { family = "GoMono Nerd Font Mono" } })
-config.font_size = 14
-config.line_height = 1.4
+-- config.font = wezterm.font("VictorMono Nerd Font")
+config.font = wezterm.font("IntoneMono Nerd Font")
+config.font_size = 15
 config.hide_tab_bar_if_only_one_tab = true
--- config.window_background_opacity = 0.92
--- config.macos_window_background_blur = 6
+config.window_background_opacity = 0.92
+config.macos_window_background_blur = 6
 -- config.native_macos_fullscreen_mode = true
 --
 config.window_padding = {
