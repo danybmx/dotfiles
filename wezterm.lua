@@ -71,8 +71,8 @@ config.color_scheme = "Tokyo Night"
 -- config.font = wezterm.font_with_fallback({ { family = "Dank Mono" }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font_with_fallback({ { family = "Comic Mono" }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font("VictorMono Nerd Font")
-config.font = wezterm.font("IntoneMono Nerd Font")
-config.font_size = 15
+config.font = wezterm.font("MartianMono Nerd Font", { stretch = "Condensed" })
+config.font_size = 13
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.92
 config.macos_window_background_blur = 6
