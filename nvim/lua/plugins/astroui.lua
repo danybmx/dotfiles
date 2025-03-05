@@ -72,10 +72,10 @@ return {
           Search = { fg = "red" },
           IncSearch = { fg = "red" },
           -- Pmenu
-          Pmenu = { bg = "none" },
-          PmenuSel = { bg = "none" },
-          PmenuSbar = { bg = "none" },
-          PmenuThumb = { bg = "none" },
+          -- Pmenu = { bg = "none" },
+          -- PmenuSel = { bg = "none" },
+          -- PmenuSbar = { bg = "none" },
+          -- PmenuThumb = { bg = "none" },
           -- Notifications
           NotifyINFOBody = { bg = "none" },
           NotifyWARNBody = { bg = "none" },

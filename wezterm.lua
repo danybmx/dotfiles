@@ -61,18 +61,22 @@ config.color_scheme = "Tokyo Night"
 -- config.font = wezterm.font_with_fallback({ { family = "Jetsevka", weight = 500 }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font("M+1Code Nerd Font Mono")
 -- config.font = wezterm.font("GoMono Nerd Font")
--- config.font = wezterm.font("Fira Code")
+-- config.font = wezterm.font("FiraCode Nerd Font")
 -- config.font = wezterm.font("MonoLisa")
--- config.font = wezterm.font("Monaspace Neon")
+config.font = wezterm.font("Monaspace Neon")
 -- config.font = wezterm.font("CommitMono Nerd Font")
 -- config.font = wezterm.font("ComicShannsMono Nerd Font")
+-- config.font = wezterm.font("ZedMono Nerd Font", { stretch = "Expanded" })
+-- config.font = wezterm.font("ZedMono Nerd Font", { weight = 500 })
 -- config.font = wezterm.font("Monaspace Neon")
 -- config.font = wezterm.font("AnonymicePro Nerd Font")
 -- config.font = wezterm.font_with_fallback({ { family = "Dank Mono" }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font_with_fallback({ { family = "Comic Mono" }, { family = "GoMono Nerd Font Mono" } })
 -- config.font = wezterm.font("VictorMono Nerd Font")
-config.font = wezterm.font("MartianMono Nerd Font", { stretch = "Condensed" })
-config.font_size = 13
+-- config.font = wezterm.font("MartianMono Nerd Font", { stretch = "Condensed" })
+-- config.font = wezterm.font("CaskaydiaCove Nerd Font")
+config.font_size = 14
+config.line_height = 1.3
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.92
 config.macos_window_background_blur = 6
@@ -168,8 +172,8 @@ wezterm.on("gui-startup", function()
 	-- Set dimensions to 85% of current screen size
 	-- The actual dimensions will be a bit bigger if we take into
 	-- account the decorations on top
-	local width = screen.width * 0.40
-	local height = screen.height * 0.50
+	local width = screen.width * 0.60
+	local height = screen.height * 0.60
 
 	gui_window:set_inner_size(width, height)
 
