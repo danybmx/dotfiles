@@ -63,7 +63,7 @@ config.color_scheme = "Tokyo Night"
 -- config.font = wezterm.font("GoMono Nerd Font")
 -- config.font = wezterm.font("FiraCode Nerd Font")
 -- config.font = wezterm.font("MonoLisa")
-config.font = wezterm.font("Monaspace Neon")
+-- config.font = wezterm.font("Monaspace Neon")
 -- config.font = wezterm.font("CommitMono Nerd Font")
 -- config.font = wezterm.font("ComicShannsMono Nerd Font")
 -- config.font = wezterm.font("ZedMono Nerd Font", { stretch = "Expanded" })
@@ -75,8 +75,9 @@ config.font = wezterm.font("Monaspace Neon")
 -- config.font = wezterm.font("VictorMono Nerd Font")
 -- config.font = wezterm.font("MartianMono Nerd Font", { stretch = "Condensed" })
 -- config.font = wezterm.font("CaskaydiaCove Nerd Font")
-config.font_size = 14
+config.font = wezterm.font("Liga SFMono Nerd Font")
 config.line_height = 1.3
+config.font_size = 15
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.92
 config.macos_window_background_blur = 6
