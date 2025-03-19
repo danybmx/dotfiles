@@ -1,4 +1,7 @@
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "ssh_connections": [
     {
       "host": "neositek10",

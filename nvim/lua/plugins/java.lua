@@ -1,6 +1,14 @@
 return {
   "nvim-java/nvim-java",
   dependencies = {
+    "nvim-java/lua-async-await",
+    "nvim-java/nvim-java-test",
+    "nvim-java/nvim-java-core",
+    "nvim-java/nvim-java-dap",
+    {
+      "mfussenegger/nvim-dap",
+      config = function() end,
+    },
     {
       "neovim/nvim-lspconfig",
       opts = {
@@ -12,7 +20,7 @@ return {
                   runtimes = {
                     {
                       name = "JavaSE-21",
-                      path = "/Users/drodriguez/.sdkman/candidates/java/21.0.2-amzn",
+                      path = "/Users/drodriguez/.sdkman/candidates/java/current",
                     },
                   },
                 },
