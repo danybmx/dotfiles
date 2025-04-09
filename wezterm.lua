@@ -76,8 +76,8 @@ config.color_scheme = "Tokyo Night"
 -- config.font = wezterm.font("MartianMono Nerd Font", { stretch = "Condensed" })
 config.font = wezterm.font("CaskaydiaCove Nerd Font", { weight = 300 })
 -- config.font = wezterm.font("Liga SFMono Nerd Font")
+config.font_size = 13
 config.line_height = 1.3
-config.font_size = 15
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.92
 config.macos_window_background_blur = 6
