@@ -12,7 +12,7 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
 fi
 
 rm $HOME/.oh-my-zsh/custom/themes/dpstudios.zsh-theme || true
-ln -s $PWD/dpstudios.zsh-theme $HOME/.oh-my-zsh/custom/themes/dpstudios.zsh-theme 
+ln -s $PWD/dpstudios.zsh-theme $HOME/.oh-my-zsh/custom/themes/dpstudios.zsh-theme
 if command -v gsed; then
   gsed -i '/^ZSH_THEME/c\ZSH_THEME="dpstudios"' ~/.zshrc
 else
@@ -25,7 +25,7 @@ rm -r ~/.config/alacritty || true
 mkdir ~/.config/alacritty
 ln -s $PWD/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 rm -rf ~/.config/nvim || true
-ln -s $PWD/nvim $HOME/.config/nvim
+ln -s $PWD/nvim-astro $HOME/.config/nvim
 rm -r ~/.ideavimrc || true
 ln -s $PWD/ideavimrc $HOME/.ideavimrc
 rm ~/.wezterm.lua || true
@@ -34,3 +34,6 @@ rm ~/.config/zed/settings.json
 ln -s $PWD/zed/settings.json ~/.config/zed/settings.json
 rm ~/.config/zed/keymap.json
 ln -s $PWD/zed/keymap.json ~/.config/zed/keymap.json
+mkdir -p ~/.config/ghostty || true
+rm ~/.config/ghostty/config || true
+ln -s $PWD/ghostty/config ~/.config/ghostty/config
