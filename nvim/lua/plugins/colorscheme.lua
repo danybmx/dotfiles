@@ -1,20 +1,32 @@
 return {
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = true,
+  --   opts = {
+  --     transparent = true,
+  --     style = "night",
+  --     styles = {
+  --       sidebars = "transparent",
+  --       floats = "transparent",
+  --     },
+  --   },
+  -- },
   {
-    "folke/tokyonight.nvim",
-    lazy = true,
+    "rose-pine/neovim",
+    name = "rose-pine",
     opts = {
-      transparent = true,
-      style = "night",
+      enable = {
+        legacy_highlights = false,
+      },
       styles = {
-        sidebars = "transparent",
-        floats = "transparent",
+        transpacency = true,
       },
     },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "rose-pine",
     },
   },
 }
