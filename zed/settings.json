@@ -17,7 +17,7 @@
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "model": "claude-3-7-sonnet"
     },
     "version": "2"
   },
@@ -32,7 +32,7 @@
   "ui_font_weight": 300,
   "buffer_font_size": 13,
   "buffer_font_weight": 300,
-  "buffer_font_family": "CaskaydiaCove Nerd Font",
+  "buffer_font_family": "MonoLisa",
   "scrollbar": {
     "show": "never"
   },
@@ -41,11 +41,7 @@
   "gutter": {
     "code_actions": true
   },
-  "theme": {
-    "mode": "system",
-    "light": "Fleet Gray",
-    "dark": "Fleet Dark"
-  },
+  "theme": "Ayu Light",
   "format_on_save": "language_server",
   "languages": {
     "JavaScript": {
